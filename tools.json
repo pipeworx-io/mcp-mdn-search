@@ -1,0 +1,65 @@
+[
+  {
+    "name": "search",
+    "description": "Full-text search across MDN content.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string",
+          "description": "en-US (default) | fr | es | ja | zh-CN | …"
+        },
+        "size": {
+          "type": "number",
+          "description": "1-100 (default 10)"
+        },
+        "page": {
+          "type": "number",
+          "description": "1-based page"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "summary",
+    "description": "Page summary by slug (e.g. \"Web/API/fetch\" or \"Web/CSS/grid\").",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug"
+      ]
+    }
+  },
+  {
+    "name": "bcd",
+    "description": "Browser Compatibility Data block for a feature page.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "slug"
+      ]
+    }
+  }
+]
